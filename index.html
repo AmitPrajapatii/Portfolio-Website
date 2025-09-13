@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-950 text-white text-xl">
+
+
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    const navLinks = mobileMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
+
+
+    <div class="wrapper w-full relative">
+        <nav class="w-full h-24 relative bg-zinc-950 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto h-full flex items-center justify-between">
+                <a href="#" class="text-white text-2xl font-bold">Amit Prajapati</a>
+                
+                <ul class="hidden lg:flex flex-row space-x-7 py-7 text-lg text-zinc-200">
+                    <a href="#Home" class="hover:text-cyan-200">Home</a>
+                    <a href="#About" class="hover:text-cyan-200">About</a>
+                    <a href="#Education" class="hover:text-cyan-200">Education</a>
+                    <a href="#Skills" class="hover:text-cyan-200">Skills</a>
+                    <a href="#Career" class="hover:text-cyan-200">Career</a>
+                    <a href="#Services" class="hover:text-cyan-200">Services</a>
+                    <a href="#Contact" class="hover:text-cyan-200">Contact</a>
+                </ul>
+
+                <button id="mobile-menu-button" class="lg:hidden text-zinc-200 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            
+            <ul id="mobile-menu" class="hidden absolute top-24 left-0 w-full bg-zinc-950 py-4 text-center text-zinc-200 space-y-4">
+                <a href="#Home" class="block py-2 hover:text-cyan-200">Home</a>
+                <a href="#About" class="block py-2 hover:text-cyan-200">About</a>
+                <a href="#Education" class="block py-2 hover:text-cyan-200">Education</a>
+                <a href="#Skills" class="block py-2 hover:text-cyan-200">Skills</a>
+                <a href="#Career" class="block py-2 hover:text-cyan-200">Career</a>
+                <a href="#Services" class="block py-2 hover:text-cyan-200">Services</a>
+                <a href="#Contact" class="block py-2 hover:text-cyan-200">Contact</a>
+            </ul>
+        </nav>
+
+
+        <div id="Home" class="container mx-auto px-4 py-8 lg:py-20">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-8 lg:gap-16">
+        <div class="right-sec text-center lg:text-left order-2 lg:order-1">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Amit Prajapati</h1>
+            <h2 class="text-lg sm:text-xl md:text-2xl lg:text-4xl mt-2 sm:mt-4 text-zinc-600 font-bold">Experienced Designer & Full Stack Developer</h2>
+            <p class="text-sm sm:text-md mt-4 text-zinc-400 font-semibold max-w-2xl mx-auto lg:mx-0">
+                Crafting elegant, user-friendly and high-performance digital experiences for global brands. Specializing in UI/UX design, frontend & backend development, and creating scalable solutions that captivate audiences. Passionate about blending creativity with technology to bring ideas to life.
+            </p>
+            <div class="mt-6 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
+                <span class="rounded-full bg-violet-950 border-2 border-violet-900 px-4 py-2 cursor-pointer">Team Lead</span>
+                <span class="rounded-full bg-violet-950 border-2 border-violet-900 px-4 py-2 cursor-pointer">Problem Solving</span>
+                <span class="rounded-full bg-violet-950 border-2 border-violet-900 px-4 py-2 cursor-pointer">Decision Making</span>
+            </div>
+        </div>
+        <div class="left-sec order-1 lg:order-2">
+            <img src="./imege.jpg" alt="Amit Prajapati" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-cover">
+        </div>
+    </div>
+</div>
+
+<div id="About" class="container mx-auto px-4 py-8 lg:py-16">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center lg:text-left">About Me</h1>
+    <p class="text-sm sm:text-md mt-4 text-zinc-400 font-light max-w-4xl mx-auto lg:mx-0">
+        I am a Full-Stack Developer and UI/UX Designer with over 10 years of experience delivering high-quality software solutions for global enterprises and startups. My career blends deep technical expertise with leadership skills, enabling me to design, build, and lead innovative digital products from concept to launch.
+    </p>
+</div>
+
+<div id="Education" class="container mx-auto px-4 py-8 lg:py-16">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center lg:text-left">Education</h1>
+    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-6 text-center lg:text-left">B.Tech in Computer Science</h2>
+    <p class="text-md sm:text-lg lg:text-xl text-zinc-400 font-light mt-4 text-center lg:text-left">SR Institution Of Technology [1st Year]</p>
+    <div class="text-sm sm:text-md text-zinc-400 font-light mt-3 text-center lg:text-left">
+        <p>Specialized in Software, Distributed Systems and Artificial Intelligence Applications.</p>
+        <ul class="list-disc list-inside mt-2 mx-auto lg:mx-0 inline-block">
+            <li>Thesis on Machine Learning for Predictive Analytics</li>
+            <li>Study is going on</li>
+            <li>Developed Creative mindset towards coding</li>
+        </ul>
+    </div>
+</div>
+
+
+<div id="Skills" class="container mx-auto px-4 py-8 lg:py-16">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center lg:text-left">Core Skills</h1>
+    <div class="mt-8">
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-center lg:text-left pt-6">Technical Skills</h2>
+        <div class="mt-4 space-y-4 max-w-2xl mx-auto">
+            <div>
+                <p class="mt-4 text-lg text-zinc-400">React.js / Next.js</p>
+                <div class="flex items-center gap-2 pt-2">
+                    <div class="h-2 bg-cyan-400 w-[95%] rounded-full"></div>
+                    <p class="text-zinc-400">95%</p>
+                </div>
+
+                <div>
+                <p class="mt-4 text-lg text-zinc-400">Node.js/Express</p>
+                <div class="flex items-center gap-2 pt-2">
+                    <div class="h-2 bg-cyan-400 w-[95%] rounded-full"></div>
+                    <p class="text-zinc-400">95%</p>
+                </div>
+                <div>
+                <p class="mt-4 text-lg text-zinc-400">Typescript & Javascript</p>
+                <div class="flex items-center gap-2 pt-2">
+                    <div class="h-2 bg-cyan-400 w-[95%] rounded-full"></div>
+                    <p class="text-zinc-400">95%</p>
+                </div>
+                <div>
+                <p class="mt-4 text-lg text-zinc-400">Database (MongoDB/ PostgreSQL)</p>
+                <div class="flex items-center gap-2 pt-2">
+                    <div class="h-2 bg-cyan-400 w-[95%] rounded-full"></div>
+                    <p class="text-zinc-400">95%</p>
+                </div>
+                <div>
+                <p class="mt-4 text-lg text-zinc-400">Cloud(AWS / Azure)</p>
+                <div class="flex items-center gap-2 pt-2">
+                    <div class="h-2 bg-cyan-400 w-[95%] rounded-full"></div>
+                    <p class="text-zinc-400">95%</p>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
+
+
+
+<!-- Career-->
+
+<div id="Career" class="bg-zinc-950 py-16 lg:py-24 px-4 sm:px-6">
+    <div class="container mx-auto max-w-7xl text-center">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl text-white font-bold">Career Journey</h1>
+        <p class="mt-4 text-md sm:text-lg lg:text-xl text-zinc-400 font-bold">An evolution path of leadership, innovation, and impact</p>
+    </div>
+
+    <div class="mt-16 relative">
+        <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-1 bg-zinc-700"></div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-12 max-w-5xl  mx-auto">
+            
+            <div class="p-6 border border-white rounded-xl lg:col-span-1 lg:justify-self-end">
+                <h1 class="text-xl text-white font-bold">2023-Present</h1>
+                <h2 class="text-2xl text-white font-bold mt-2">Completed High-Schooling</h2>
+                <p class="text-md text-zinc-400 font-bold mt-3">Leading class and work with full potential in any education related or academic work.</p>
+            </div>
+
+            <div class="p-6 border border-white rounded-xl lg:col-span-1 lg:justify-self-start lg:mt-20">
+                <h1 class="text-xl text-white font-bold">2025-Present</h1>
+                <h2 class="text-2xl text-white font-bold mt-2">Completed Intermediate</h2>
+                <p class="text-md text-zinc-400 font-bold mt-3">Leading class and work with full potential in any education related or academic work.</p>
+            </div>
+
+            <div class="p-6 border border-white rounded-xl lg:col-span-1 lg:justify-self-end lg:mt-20">
+                <h1 class="text-xl text-white font-bold">2024-2025</h1>
+                <h2 class="text-2xl text-white font-bold mt-2">Journey to Web Development</h2>
+                <p class="text-md text-zinc-400 font-bold mt-3">Started my career towards Web Development to learn, implement and then work as a leading.</p>
+            </div>
+
+            <div class="p-6 border border-white rounded-xl lg:col-span-1 lg:justify-self-start lg:mt-20">
+                <h1 class="text-xl text-white font-bold">2024-2025</h1>
+                <h2 class="text-2xl text-white font-bold mt-2">UI/UX Designer</h2>
+                <p class="text-md text-zinc-400 font-bold mt-3">Learned Designing next level of UI for global brands, with added unbelievable, eye-catching design developed for many brands and company.</p>
+            </div>
+
+            <div class="p-6 border border-white rounded-xl lg:col-span-1 lg:justify-self-end lg:mt-20">
+                <h1 class="text-xl text-white font-bold">2024-2025</h1>
+                <h2 class="text-2xl text-white font-bold mt-2">Frontend Developer & Interaction Designer</h2>
+                <p class="text-md text-zinc-400 font-bold mt-3">Built responsive and interactive marketing websites during the rise of mobile-first design. Created high-conversion landing pages for major e-commerce campaigns. Developed custom animations that improved user engagement metrics by over 45%.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section -->
+    <div id="Services" class="relative py-16 lg:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                <span class="text-yellow-200">Services</span> <span class="text-blue-50">| Provide</span>
+            </h2>
+            
+            <!-- Responsive Grid for Service Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                
+                <!-- Card 1: UI/UX Design -->
+                <div class="border-2 border-white p-6 rounded-2xl flex flex-col items-center text-center transition-transform transform hover:scale-105">
+                    <h2 class="text-2xl font-bold mb-2">UI/UX Design</h2>
+                    <p class="text-md text-zinc-400 font-medium">Design next level of UI/UX that can steal your soul.</p>
+                    <button class="mt-4 px-6 py-2 bg-violet-900 rounded-lg text-lg font-bold hover:bg-violet-800 transition-colors">Learn More</button>
+                </div>
+                
+                <!-- Card 2: Application Design -->
+                <div class="border-2 border-white p-6 rounded-2xl flex flex-col items-center text-center transition-transform transform hover:scale-105">
+                    <h2 class="text-2xl font-bold mb-2">Application Design</h2>
+                    <p class="text-md text-zinc-400 font-medium">Design next level of UI/UX that can steal your soul.</p>
+                    <button class="mt-4 px-6 py-2 bg-violet-900 rounded-lg text-lg font-bold hover:bg-violet-800 transition-colors">Learn More</button>
+                </div>
+                
+                <!-- Card 3: Website Design -->
+                <div class="border-2 border-white p-6 rounded-2xl flex flex-col items-center text-center transition-transform transform hover:scale-105">
+                    <h2 class="text-2xl font-bold mb-2">Website Design</h2>
+                    <p class="text-md text-zinc-400 font-medium">Design next level of UI/UX that can steal your soul.</p>
+                    <button class="mt-4 px-6 py-2 bg-violet-900 rounded-lg text-lg font-bold hover:bg-violet-800 transition-colors">Learn More</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <div id="Contact" class="py-16 lg:py-24 bg-zinc-950">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="mb-4 text-center text-3xl sm:text-4xl lg:text-5xl font-bold">Contact Us</h2>
+            <p class="mb-8 font-light text-center text-zinc-400 text-sm sm:text-lg">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+            
+            <form action="#" class="space-y-6">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Your email</label>
+                    <input type="email" id="email" class="bg-zinc-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500" placeholder="name@example.com" required>
+                </div>
+                <div>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-300">Subject</label>
+                    <input type="text" id="subject" class="bg-zinc-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500" placeholder="Let us know how we can help you" required>
+                </div>
+                <div>
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Your message</label>
+                    <textarea id="message" rows="6" class="bg-zinc-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="py-3 px-8 text-lg font-medium text-white rounded-lg bg-violet-600 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-violet-300 transition-colors">Send Message</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Background Text -->
+        <h2 class="mt-12 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold
+         text-zinc-800 text-start ml-[-29rem] select-none overflow-hidden  mb-[-160px]">Amit Prajapati</h2>
+    </div>
+
+ 
+    </body>
+    </html>
